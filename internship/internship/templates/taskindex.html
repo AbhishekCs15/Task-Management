@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container">
+        <h1 style="text-align:center"> Task Management</h1>
+        <table class="table">
+          <!-- This is where you will write the code to render a Bootstrap
+          Table that contains all the information from the
+          cafe-data.csv file. -->
+
+            <tr>
+                <th><a href="{{ url_for('create') }}">Create</a></th>
+            </tr>
+            <tr>
+                <th><a href="{{ url_for('view') }}">View</a></th>
+            </tr>
+            <tr>
+                <th><a href="{{ url_for('view') }}">Update</a></th>
+            </tr>
+            <tr>
+                <th><a href="{{ url_for('view') }}">Delete</a></th>
+            </tr>
+  	    </table>
+</div>
+{% endblock %}

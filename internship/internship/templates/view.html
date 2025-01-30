@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block content %}
+<div class="view_div">
+    <h1> Update/Edit</h1>
+<!--    <p><strong>Name:</strong> {{ user.name }}</p>-->
+<!--    <p><strong>Email:</strong> {{ user.email }}</p>-->
+<!--    <p><strong>Title:</strong> {{ user.title }}</p>-->
+<!--    <p><strong>Status:</strong> {{ user.status }}</p>-->
+<!--    <p><strong>Description:</strong> {{ user.description }}</p>-->
+<!--    <p><strong>Date:</strong> {{ user.date }}</p>-->
+
+     <table class="table" style="color: white">
+        {% for i in det %}
+            <tr>
+                <td>
+                <p><strong>id:</strong><br>{{ i.id }}</p>
+                </td>
+                <td>
+                <p><strong>Name:</strong><br> {{ user.name }}</p>
+                </td>
+                <td>
+                <p><strong>Email:</strong><br> {{ user.email }}</p>
+                </td>
+                <td>
+                <p><strong>Title:</strong><br> {{ i.title }}</p>
+                </td>
+                <td>
+                <p><strong>Status:</strong><br> {{ i.status }}</p>
+                </td>
+                <td>
+                <p><strong>Description:</strong><br> {{ i.description }}</p>
+                </td>
+                <td>
+               <p><strong>Date:</strong><br> {{ i.date }}</p>
+                </td>
+                <td>
+                    <a href= "{{ url_for('update', id=i.id) }}">
+                    edit</a><br>
+                    <a href= "{{ url_for('delete', id=i.id) }}" style="color: red">
+                    Delete</a>
+
+                </td>
+            </tr>
+         {% endfor%}
+     </table>
+</div>
+
+
+{% endblock %}
